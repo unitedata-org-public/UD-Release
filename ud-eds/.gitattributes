@@ -1,2 +1,0 @@
-ud-eds.war.gz filter=lfs diff=lfs merge=lfs -text
-ud-eds.war filter=lfs diff=lfs merge=lfs -text
