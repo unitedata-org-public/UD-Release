@@ -15,6 +15,6 @@
 4，...
 ```
 
->[下载]
+>[下载](ud-data-producer-server.tar.gz)
 
->[说明](producer-api-install-doc.md)
+>[说明](https://github.com/unitedata-org-public/Documentation/blob/master/producer-api-install-doc.md)
