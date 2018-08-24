@@ -17,9 +17,9 @@
 5，...
 ```
 
->下载
+>[下载](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-data-consumer-sdk/ud-data-consumer-sdk.tar.gz)
 
-> 说明(https://github.com/unitedata-org-public/Documentation/blob/master/consumer-sdk-doc.md)
+>[说明](https://github.com/unitedata-org-public/Documentation/blob/master/consumer-sdk-doc.md)
 
 ``` 发布说明
 数链平台提供了一种基于 Spring Boot 框架的可部署 Restful 风格的 API 服务。
@@ -27,6 +27,6 @@
 它包含了 SDK 的所有功能，并且提供了一种基于 REDIS 的本地交易仓库。
 ```
 
->下载
+>[下载]
 
->说明(https://github.com/unitedata-org-public/Documentation/blob/master/consumer-api-install-doc.md)
+>[说明](https://github.com/unitedata-org-public/Documentation/blob/master/consumer-api-install-doc.md)
