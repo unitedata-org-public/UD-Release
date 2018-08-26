@@ -16,6 +16,6 @@
 4，...
 ```
 
->[下载](ud-data-producer-server.tar.gz?raw=true)
+>[ud-data-producer-server-1.3.0.release.tar.gz](ud-data-producer-server.tar.gz?raw=true)
 
 >[说明](https://github.com/unitedata-org-public/Documentation/blob/master/producer-api-install-doc.md)
