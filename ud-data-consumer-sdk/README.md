@@ -17,7 +17,7 @@
 5，...
 ```
 
->[下载](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-data-consumer-sdk/ud-data-consumer-sdk.tar.gz?raw=true)
+>[ud-data-consumer-sdk-1.3.0.release.tar.gz](ud-data-consumer-sdk.tar.gz?raw=true)
 
 >[说明](https://github.com/unitedata-org-public/Documentation/blob/master/consumer-sdk-doc.md)
 
@@ -27,6 +27,6 @@
 它包含了 SDK 的所有功能，并且提供了一种基于 REDIS 的本地交易仓库。
 ```
 
->[下载](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-data-consumer-sdk/ud-data-consumer-server.tar.gz?raw=true)
+>[下载](ud-data-consumer-server-1.3.0.release.tar.gz?raw=true)
 
 >[说明](https://github.com/unitedata-org-public/Documentation/blob/master/consumer-api-install-doc.md)
