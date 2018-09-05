@@ -71,3 +71,23 @@
 3.	停止Tomcat（bin目录下执行：sh shutdown.sh）
 4.	将编译成功xxx.class文件放在…/Tomcat/webapps/ud-eds/WEB-INF/classes/org/unitedata/eds/core/change目录之下
 5.	重新运行Tomcat（bin目录下执行：sudo sh startup.sh）
+
+### 八、匿踪配置
+1.    准备数据库创建hidden_info表：
+CREATE TABLE `hidden_info` (
+`id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '匿踪ID',
+`md5` varchar(20) DEFAULT NULL COMMENT '数据的md5码',
+`realvalue` varchar(30) DEFAULT NULL COMMENT '数据的原始值',
+`type` varchar(20) DEFAULT NULL COMMENT '匿踪类型',
+`bizkey` varchar(20) DEFAULT NULL COMMENT '业务类别',
+`created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='匿踪信息';
+* 注：
+* type暂时支持 两种类型 1.idno （身份证）2.mobile （手机号）
+* bizkey，指匿踪业务类别，对应于数据桥接网关匿踪配置页面的业务类别
+
+2.    hidden_info表中插入数据，以供匿踪查询
+3.    数据桥接网关配置匿踪数据所在数据库信息
+4.    数据桥接网关配置匿踪配置，持久化合约与业务类别对应关系
