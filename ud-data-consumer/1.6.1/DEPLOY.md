@@ -17,7 +17,7 @@
 5. 使用 jdk 运行下载的 jar 包
 6. 打开浏览器，输入地址 http://{域名}/swagger-ui.html，看到下图：
 
-![api-doc](images/WX20180830-163415@2x.png)
+![api-doc](consumer-api-doc.png)
 
 ## 数据服务配置
 
