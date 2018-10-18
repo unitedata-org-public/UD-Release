@@ -23,15 +23,14 @@
 
 数据服务可配置内容：
 
-* account=合约访问账户
-* password=合约访问账户密码
-* privateKey=合约访问账户私钥
-* contractApi=合约 API 地址
-
 ```java
+// 合约访问账户
 account=test
+// 合约访问账户密码
 password=passwd
+// 合约访问账户私钥
 privateKey=5KfU6VKjtXCH1RNvPd7hZxQdi9DfAqtGdYwdK38WT97DqXc5R9v
+// 合约 API 地址
 contractApi=http://preview.unitedata.link/v1
 ```
 

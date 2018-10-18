@@ -10,12 +10,18 @@
  */
 public class DataQueryProtocolTest {
 
+    // eos api 地址
     private static final String eosHost = "http://preview.unitedata.link/v1";
+    // eos 账户
     private static final String account = "muhe";
+    // eos 私钥
     private static final String privateKey = "5KfU6VKjtXCH1RNvPd7hZxQdi9DfAqtGdYwdK38WT97DqXc5R9v";
+    // 合约地址
     private static final String contractId = "dbdjeoaxdtti";
+    // 交易订单 id
     private static final String transactionId = "";
 
+    // 查询参数
     private Map<String, Object> queryParameter;
 
     @Before
