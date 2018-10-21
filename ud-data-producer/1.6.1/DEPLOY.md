@@ -33,12 +33,12 @@ password=passwd
 // 合约访问账户私钥
 privateKey=5KfU6VKjtXCH1RNvPd7hZxQdi9DfAqtGdYwdK38WT97DqXc5R9v
 // 合约 API 地址
-contractApi=http://preview.unitedata.link/v1
+contractApi=https://preview.unitedata.link/v1
 // eds 数据桥接网关地址
 edsApi=http://unitedata.fudata.info/ud-eds
-// eds 数据桥接网关 http[s] 数据访问超时
+// eds 数据桥接网关 http[s] 数据访问超时
 edsTimeoutRead=1000
-// eds 数据桥接网关 http[s] 连接超时
+// eds 数据桥接网关 http[s] 连接超时
 edsTimeoutConnect=1000
 // 多方计算服务 api 地址
 multiServiceApi=
