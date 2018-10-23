@@ -46,27 +46,30 @@
 
 ### 六、自定义类处理模式
 ##### sdk包：ud-eds-sdk-1.0.jar 基于sdk进行自定义类开发
-1.  加载mvn install:install-file -Dfile=.../ud-eds-sdk-1.0.jar -DgroupId=org.unitedata.eds -DartifactId=ud-eds-sdk -Dversion=1.0 -Dpackaging=jar
-2. 
+1.  将jar包加载至本地maven库
+mvn install:install-file -Dfile=.../ud-eds-sdk-1.0.jar -DgroupId=org.unitedata.eds -DartifactId=ud-eds-sdk -Dversion=1.0 -Dpackaging=jar
+2. 增加jar包依赖
 <dependency>
 <groupId>org.unitedata.eds</groupId>
 <artifactId>ud-eds-sdk</artifactId>
 <version>1.0</version>
 </dependency>
-1.    自定义类xxx.java实现IChange接口：
+3.自定义类所属包路径固定：org.unitedata.eds.core.change(创建相应包路径，并在改路径下创建xxx.java类)
+4.自定义类xxx.java实现IChange接口：
 public interface IChange {
 //获取需求方所需数据
 DataSet change(OutPutDefinition outPutDefinition, Map<String, String> params);
 //数据获取方式测试接口
 int validate(Table table, OutPutDefinition outPutDefinition, Map<String, String> params);
+//返回值含义：0-SUCCESS,1-FAILURE,2-DISAGREE
 }
 * 注：
 * SUCCESS(0,"测试通过!"),
 * FAILURE(1,"测试不通过，无法获取数据!"),
 * DISAGREE(2,"测试不通过，请检查数据是否与标准数据字典对应!");
 
-2.    编译自定义类为xxx.class
-3.    将编译成功xxx.class文件放在…/Tomcat/webapps/classes(需创建)目录之下
+2.    将项目编译成jar包，名称固定：ud-eds-change.jar(也可以生成后手动修改成ud-eds-change.jar)
+3.    将生成成功ud-eds-change.jar文件放在…/Tomcat/webapps/classes(需创建)目录之下
 
 ### 七、War包部署
 ##### war包：ud-eds.war 企业内部系统web应用程序
