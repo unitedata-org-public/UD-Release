@@ -71,17 +71,18 @@ PRIMARY KEY (`id`)
 
 DROP TABLE IF EXISTS `cache_info`;
 CREATE TABLE `cache_info` (
-`id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '标识ID',
-`key_info` varchar(100) DEFAULT NULL COMMENT '订单key',
-`value_info` text DEFAULT NULL COMMENT '订单value',
-`expired_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '过期时间',
-`createdby` bigint(20) DEFAULT NULL COMMENT '创建者',
+`id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+`key_info` varchar(255) NOT NULL COMMENT '查询的key',
+`value_info` text COMMENT '查询的value',
+`type_info` int not null default '0' comment '数据类型',
+`state` tinyint not null default '0' comment '数据状态',
+`mods` int not null default '0' comment '变更次数',
 `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-`updatedby` bigint(20) DEFAULT NULL COMMENT '修改者',
 `updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-`active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识',
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单持久化信息';
+`active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
+PRIMARY KEY (`id`),
+UNIQUE KEY `uk_key` (`key_info`,`type_info`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='持久化数据对象库';
 
 ALTER TABLE hidden_info ADD index idx_md5(`md5`);
 ALTER TABLE contract_biz ADD index idx_contract_id(`contract_id`);
