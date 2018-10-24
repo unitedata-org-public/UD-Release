@@ -97,3 +97,21 @@
 2.    hidden_info表中插入数据，以供匿踪查询
 3.    数据桥接网关配置匿踪数据所在数据库信息
 4.    数据桥接网关配置匿踪配置，持久化合约与业务类别对应关系
+
+### 九、仓库空间数据表
+
+1.    准备仓储空间创建cache_info表,用于提供方服务即时存储资源用途，需在提供方启动前配置完成：
+* DROP TABLE IF EXISTS `cache_info`;
+* CREATE TABLE `cache_info` (
+* `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+* `key_info` varchar(255) NOT NULL COMMENT '查询的key',
+* `value_info` text COMMENT '查询的value',
+* `type_info` int not null default '0' comment '数据类型',
+* `state` tinyint not null default '0' comment '数据状态',
+* `mods` int not null default '0' comment '变更次数',
+* `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+* `updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+* `active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
+* PRIMARY KEY (`id`),
+* UNIQUE KEY `uk_key` (`key_info`,`type_info`) USING BTREE
+* ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='持久化数据对象库';
