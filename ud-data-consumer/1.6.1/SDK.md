@@ -11,7 +11,7 @@
 public class DataQueryProtocolTest {
 
     // eos api 地址
-    private static final String eosHost = "http://preview.unitedata.link/v1";
+    private static final String eosHost = "https://preview.unitedata.link/v1";
     // eos 账户
     private static final String account = "muhe";
     // eos 私钥
