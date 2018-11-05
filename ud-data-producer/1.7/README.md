@@ -7,7 +7,8 @@
 > 移除配置
 
 ```java
-model.data.repository=default
+// 数据仓库
+modelDataRepository=default
 ```
 
 ### 优化业务流程
