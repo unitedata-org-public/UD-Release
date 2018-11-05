@@ -1,8 +1,9 @@
 # 1.6.1-RELEASE
 
-## 更新日志
+* [ud-data-producer-server-1.6.1.release.tar.gz](ud-data-producer-server-1.6.1.release.tar.gz?raw=true)
+* [部署说明](DEPLOY.md)
 
-### 简化配置内容
+## 更新日志
 
 > 新增配置
 
@@ -10,7 +11,7 @@
 model.data.repository=default
 ```
 
-> 移除配置
+> 配置相关
 
 ```java
 contract.resolver=org.unitedata.producer.server.domain.contract.eos.EosDataContractRepository
@@ -43,7 +44,7 @@ redis.pool.max-idle=8
 redis.pool.min-idle=0
 ```
 
-### 优化业务流程
+> 优化业务流程
 
 * 移除基于 redis 的持久化数据仓库
 * 新增基于 redis 的数据缓存仓库

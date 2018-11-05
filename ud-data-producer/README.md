@@ -12,11 +12,9 @@
 相比前一个版本，优化了业务流程，简化了系统配置，提升了执行效率，以及稳定性，提高错误提示的准确性
 ```
 
->[ud-data-producer-server-1.7.release.tar.gz](1.7/ud-data-producer-server-1.7.release.tar.gz?raw=true)
-
->[变更说明](1.7/README.md)
-
->[部署说明](1.7/DEPLOY.md)
+* [ud-data-producer-server-1.7.release.tar.gz](1.7/ud-data-producer-server-1.7.release.tar.gz?raw=true)
+* [变更说明](1.7/README.md)
+* [部署说明](1.7/DEPLOY.md)
 
 ## 1.6.1-RELEASE （2018-10-18）
 
@@ -25,23 +23,6 @@
 相比前一个版本，优化了业务流程，简化了系统配置，提升了执行效率，以及稳定性
 ```
 
->[ud-data-producer-server-1.6.1.release.tar.gz](1.6.1/ud-data-producer-server-1.6.1.release.tar.gz?raw=true)
-
->[变更说明](1.6.1/README.md)
-
->[部署说明](1.6.1/DEPLOY.md)
-
-## 1.3.0-RELEASE （2018-08-24）
-
-``` 发布说明
-数链平台数据提供服务可用版本发布，版本为 1.3.0。作为第一个可扩散版本，它提供了一组面向平台的数据提供服务：
-
-1，支持一种基于 EOS 合约交易的业务模型
-2，支持一种基于 EOS 合约的数据计算模型
-3，支持一种开放的安全多方计算模型
-4，...
-```
-
->[ud-data-producer-server-1.3.0.release.tar.gz](1.3.0/ud-data-producer-server.tar.gz?raw=true)
-
->[说明](https://github.com/unitedata-org-public/Documentation/blob/master/producer-api-install-doc.md)
+* [ud-data-producer-server-1.6.1.release.tar.gz](1.6.1/ud-data-producer-server-1.6.1.release.tar.gz?raw=true)
+* [变更说明](1.6.1/README.md)
+* [部署说明](1.6.1/DEPLOY.md)

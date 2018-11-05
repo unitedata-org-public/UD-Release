@@ -1,3 +1,15 @@
 # UD-Release
 
-文档请参考：[https://github.com/unitedata-org-public/Documentation](https://github.com/unitedata-org-public/Documentation)
+## 版本发布
+
+### 数据提供方（1.7-RELEASE）（2018-11-05）
+
+* [变更说明](ud-data-producer-server/1.7/README.md)
+
+### 数据输出服务（1.7-RELEASE）（2018-11-05）
+
+* [变更说明](ud-data-consumer/1.7/README.md)
+
+## 设计文档
+
+* [传送门...](https://github.com/unitedata-org-public/Documentation)
