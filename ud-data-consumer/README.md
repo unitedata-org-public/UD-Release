@@ -8,7 +8,8 @@
 ## 1.7-RELEASE （2018-11-05）
 
 ```plaintext
-数链平台数据输出服务 SDK 1.7。相比前一个版本，优化了业务流程，提升了执行效率和稳定。
+数链平台数据输出服务 SDK 1.7。
+相比前一个版本，优化了业务流程，提升了执行效率和稳定，提高了错误提示的准确性。
 ```
 
 >[ud-data-consumer-sdk-1.7.release.tar.gz](1.7/ud-data-consumer-sdk-1.7.release.tar.gz?raw=true)
@@ -24,7 +25,8 @@
 ## 1.6.1-RELEASE （2018-10-18）
 
 ```plaintext
-数链平台数据输出服务 SDK 第二个稳定版本，版本号为 1.6.1。相比前一个版本，优化了业务流程，提升了执行效率和稳定。
+数链平台数据输出服务 SDK 第二个稳定版本 1.6.1。
+相比前一个版本，优化了业务流程，提升了执行效率和稳定。
 ```
 
 >[ud-data-consumer-sdk-1.6.1.release.tar.gz](1.6.1/ud-data-consumer-sdk-1.6.1.release.tar.gz?raw=true)
