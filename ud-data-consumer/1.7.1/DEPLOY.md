@@ -5,14 +5,14 @@
 数据服务 api 是基于 http[s] 协议的一个数据客户端服务。
 它进一步封装了数据服务 SDK，并且提供了一组 restful API 风格的简单接口
 
-版本：1.7
+版本：1.7.1
 ```
 
 ## 部署
 
 1. 自行搭建服务器
 2. 安装 jdk，版本 1.8 +
-3. [下载数据服务 jar 包](ud-data-consumer-server-1.7.release.tar.gz?raw=true)
+3. [下载数据服务 jar 包](ud-data-consumer-server-1.7.1.release.tar.gz?raw=true)
 4. 解压包文件到指定的路径，并配置参数，具体配置请查看数据服务配置
 5. 使用 jdk 运行下载的 jar 包
 6. 打开浏览器，输入地址 http://{域名}/swagger-ui.html，看到下图：
