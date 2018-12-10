@@ -39,10 +39,9 @@
 1.    在路径../Tomcat/webapps/config(需创建)目录下创建application.properties配置文件
 2.    增加private.key=用户私钥
 3.    增加spring.datasource.druid.url=(对应mysql服务器：端口、数据库名称)
-* 增加spring.datasource.druid.username=对应本地设置的username)
-* 增加spring.datasource.druid.password=(对应本地设置的password)
+4.    增加spring.datasource.druid.username=对应本地设置的username)
+5.    增加spring.datasource.druid.password=(对应本地设置的password)
 * 注意：重新修改项目配置文件application.properties,需重新启动Tomcat才能生效。
-
 
 ### 六、自定义类处理模式
 ##### sdk包：ud-eds-sdk-1.0.jar 基于sdk进行自定义类开发
@@ -71,14 +70,8 @@
 5.    将项目编译成jar包，名称固定：ud-eds-change.jar(也可以生成后手动修改成ud-eds-change.jar)
 6.    将生成成功ud-eds-change.jar文件放在…/Tomcat/webapps/classes(需创建)目录之下
 
-### 七、War包部署
-##### war包：ud-eds.war 企业内部系统web应用程序
-1.    将ud-eds.war放在Tomcat安装目录中的/webapps目录下
-2.    运行Tomcat（bin目录下执行：sudo sh startup.sh）
-3.    浏览器访问http://localhost:8080/ud-eds/ 测试部署是否成功 (若失败，请检查以上操作或咨询相关人员)
-
-### 八、匿踪配置
-1.    准备数据库创建hidden_info表：
+### 七、匿踪配置
+1.    创建匿踪信息表hidden_info：
 * CREATE TABLE `hidden_info` (
 * `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '匿踪ID',
 * `md5` varchar(20) DEFAULT NULL COMMENT '数据的md5码',
@@ -96,22 +89,25 @@
 
 2.    hidden_info表中插入数据，以供匿踪查询
 3.    数据桥接网关配置匿踪数据所在数据库信息
-4.    数据桥接网关配置匿踪配置，持久化合约与业务类别对应关系
+4.    创建合约业务信息表contract_biz（ud_eds_db.sql）
+5.    数据桥接网关配置匿踪配置，持久化合约与业务类别对应关系
 
-### 九、仓库空间数据表
+### 八、仓储空间配置
+* 用于提供方服务即时存储资源用途（交易、订单数据）
+1.   创建仓储空间信息表cache_info（ud_eds_db.sql）。
 
-1.    准备仓储空间创建cache_info表,用于提供方服务即时存储资源用途，需在提供方启动前配置完成：
-* DROP TABLE IF EXISTS `cache_info`;
-* CREATE TABLE `cache_info` (
-* `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-* `key_info` varchar(255) NOT NULL COMMENT '查询的key',
-* `value_info` text COMMENT '查询的value',
-* `type_info` int not null default '0' comment '数据类型',
-* `state` tinyint not null default '0' comment '数据状态',
-* `mods` int not null default '0' comment '变更次数',
-* `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-* `updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-* `active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
-* PRIMARY KEY (`id`),
-* UNIQUE KEY `uk_key` (`key_info`,`type_info`) USING BTREE
-* ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='持久化数据对象库';
+### 九、第三方授权存证数据
+* 支持第三方存证业务
+1.   创建存证信息表tb_certification_log（ud_eds_db.sql）。
+
+### 十、黑名单凭证数据
+* 支持黑名单凭证数据业务（见文档凭证数据上传业务https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/PROOF.md）
+1.   创建黑名单信息表blacklist_info（ud_eds_db.sql）。
+1.   创建黑名单需求方请求数据表hide_request_info（ud_eds_db.sql）。
+1.   创建黑名单提供方响应数据表provide_response_info（ud_eds_db.sql）。
+
+### 十一、War包部署
+##### war包：ud-eds.war 企业内部系统web应用程序
+1.    将ud-eds.war放在Tomcat安装目录中的/webapps目录下
+2.    运行Tomcat（bin目录下执行：sudo sh startup.sh）
+3.    浏览器访问http://localhost:8080/ud-eds/ 测试部署是否成功 (若失败，请检查以上操作或咨询相关人员)
