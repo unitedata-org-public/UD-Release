@@ -20,12 +20,13 @@ public class DataQueryProtocolTest {
     private static final String contractId = "dbdjeoaxdtti";
     // 交易订单 id
     private static final String transactionId = "";
+    // 姓名
+    private static final String name = "张三";
+    // 身份证
+    private static final String idNumber = "411524199664278730";
 
     // 查询参数
     private Map<String, Object> queryParameter;
-
-    private String name = "张三";
-    private String idNumber = "411524199664278730";
 
     @Before
     public void preQuery() {
