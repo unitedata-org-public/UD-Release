@@ -5,6 +5,26 @@
 它实现了一组以模型计算为核心的数据处理，多方计算混淆数据的业务过程，并且提供了一组 restful API 风格的简单接口。
 ```
 
+## 1.9.0-RELEASE （2018-12-12）
+
+```plaintext
+数链平台数据提供服务发布 1.9.0。支持斑马合约（金融贷款黑名单）业务
+```
+
+* [ud-data-producer-server-1.9.0.release.tar.gz](1.9/ud-data-producer-server-1.9.0.zebra.release.tar.gz?raw=true)
+* [变更说明](1.9/README.md)
+* [部署说明](1.9/DEPLOY.md)
+
+## 1.8.0-RELEASE （2018-11-27）
+
+```plaintext
+数链平台数据提供服务发布 1.8.0。支持第三方存证业务
+```
+
+* [ud-data-producer-server-1.8.0.release.tar.gz](1.8/ud-data-producer-server-1.8.0.release.tar.gz?raw=true)
+* [变更说明](1.8/README.md)
+* [部署说明](1.8/DEPLOY.md)
+
 ## 1.7-RELEASE （2018-11-05）
 
 ```plaintext
