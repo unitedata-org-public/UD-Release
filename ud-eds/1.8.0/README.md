@@ -101,7 +101,7 @@
 1.   创建存证信息表tb_certification_log（ud_eds_db.sql）。
 
 ### 十、黑名单凭证数据
-* 支持黑名单凭证数据业务-见文档凭证数据上传业务https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/PROOF.md
+* 支持黑名单凭证数据业务-见文档凭证数据上传业务https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/1.8.0/PROOF.md
 1.   创建黑名单信息表blacklist_info（ud_eds_db.sql）。
 1.   创建黑名单需求方请求数据表hide_request_info（ud_eds_db.sql）。
 1.   创建黑名单提供方响应数据表provide_response_info（ud_eds_db.sql）。

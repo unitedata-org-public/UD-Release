@@ -1,7 +1,7 @@
 ## 凭证上传操作文档
 
 #### 黑名单凭证数据结构
-![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/images/blacklist.png)
+![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/1.8.0/images/blacklist.png)
 
 #### 黑名单凭证数据表
 ```
@@ -89,7 +89,7 @@ POST
 注：random_code ：静态随机码
 
 #### 黑名单凭证上链流程
-![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/images/proof.png)
+![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/1.8.0/images/proof.png)
 
 #### EDS匿踪查询&精确查询
 
