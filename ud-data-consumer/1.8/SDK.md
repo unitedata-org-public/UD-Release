@@ -189,7 +189,7 @@ public class CertificationServiceTest {
             String producerAccount, CertificationParameterValue... parameters);
 
     /**
-     * 清楚指定的第三方认证信息
+     * 清除指定的第三方认证信息
      * @param producerAccount 提供方账号
      * @param token 第三方存证 token
      * @param parameters 一组有效的认证参数
@@ -208,5 +208,4 @@ public class CertificationServiceTest {
     boolean verify(
             String producerAccount,
             String token, CertificationParameterValue... parameters);
-
 ```
