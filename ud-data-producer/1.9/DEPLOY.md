@@ -21,6 +21,18 @@
 
 ![api-doc](../1.6.1/producer-api-doc.png)
 
+## 运行
+
+项目使用 spring boot 框架，并打包成 jar。因此使用以下命令运行：
+
+```cmd
+测试环境：java -jar -Dspring.profiles.active=test ud-data-producer-server-1.9.0.zebra.jar
+
+生产环境：java -jar -Dspring.profiles.active=prod ud-data-producer-server-1.9.0.zebra.jar
+        或者
+        java -jar ud-data-producer-server-1.9.0.zebra.jar
+```
+
 ## 数据服务配置
 
 数据服务可配置内容：
