@@ -14,7 +14,7 @@
 1. 自行搭建服务器
 2. 安装 jdk，版本 1.8 +
 3. 安装 redis 服务
-4. [下载数据服务 jar 包](ud-data-producer-server-1.7.release.tar.gz?raw=true)
+4. [下载数据服务 jar 包](ud-data-producer-server-1.9.0.zebra.release.tar.gz?raw=true)
 5. 解压包文件到指定的路径，并配置参数，具体配置请查看数据服务配置
 6. 使用 jdk 运行下载的 jar 包
 7. 打开浏览器，输入地址 http://{域名}/swagger-ui.html，看到下图
