@@ -12,13 +12,13 @@
 ## 使用说明
 
 1. 开启命令行，切换到本工具目录。
-2. 执行启动命令 ```java -jar test-tool.jar -s PREVIEW -a [account] -p [private-key] FILE```。
-3. 查询结束后，默认在当前目录生成```out.csv```，输出格式也是csv格式，对比输入文件增加第三列是否命中，__true__表示命中，__error__表示查询报错异常。
+2. 执行启动命令 ```java -jar test-tool-for-consumer-core-1.9.0.jar -s PREVIEW -a [account] -p [private-key] FILE```。
+3. 查询结束后，默认在当前目录生成```out.csv```，输出格式也是csv格式，对比输入文件增加第三列是否命中，true表示命中，error表示查询异常。
 
 
 ## 参数介绍
 
-* 使用```java -jar test-tool.jar -h``` 查看工具参数介绍：
+* 使用```java -jar test-tool-for-consumer-core-1.9.0.jar -h``` 查看工具参数介绍：
 * 其中用户名```-a```和私钥```-p```为必传参数；```-s```选择环境，有```TEST,PREVIEW,PROD```可选；```-t```是启动查询的线程数。其余参数介绍见详情。
 
 ```
