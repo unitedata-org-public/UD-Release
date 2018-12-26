@@ -4,6 +4,8 @@
 * [ud-data-consumer-sdk-1.9.0.release.tar.gz(测试链)](preview-ud-data-consumer-core-1.9.0.zebra.release.tar.gz?raw=true)
 * [ud-data-consumer-sdk-1.9.0.release.tar.gz(生产链)](ud-data-consumer-core-1.9.0.zebra.release.tar.gz?raw=true)
 * [SDK 接入说明](SDK.md)
+* [test-tool-for-consumer-core-1.9.0.jar(需求方测试工具)](test-tool-for-consumer-core-1.9.0.jar?raw=true)
+* [需求方测试工具使用说明](test-tool.md)
 
 ## 更新日志
 
