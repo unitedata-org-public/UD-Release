@@ -5,6 +5,18 @@
 它实现了一组以模型计算为核心的数据处理，多方计算混淆数据的业务过程，并且提供了一组 restful API 风格的简单接口。
 ```
 
+## 1.9.1-RELEASE （2018-12-27）
+
+```plaintext
+数链平台数据提供服务发布 1.9.1。
+修正 “斑马” 合约已知的问题；
+支持合约 “规格”；
+```
+
+* [ud-data-producer-server-1.9.1.release.tar.gz](1.9.1/ud-data-producer-server-1.9.1.release.tar.gz?raw=true)
+* [变更说明](1.9.1/README.md)
+* [部署说明](1.9.1/DEPLOY.md)
+
 ## 1.9.0-RELEASE （2018-12-12）
 
 ```plaintext

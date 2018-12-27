@@ -5,6 +5,19 @@
 数据输出服务 SDK 是数链平台提供的一个数据服务客户端，是为了帮助想接入数链平台的商家们提供一种快速简单的使用工具。
 ```
 
+## 1.9.1-RELEASE （2018-12-27）
+
+```plaintext
+数链平台数据输出服务 SDK 1.9.1。
+修正了 “斑马” 合约中的已知问题；
+支持合约 “规格”；
+```
+
+* [ud-data-consumer-sdk-1.9.1.release.tar.gz(测试链)](1.9.1/preview-ud-data-consumer-sdk-1.9.1.release.tar.gz?raw=true)
+* [ud-data-consumer-sdk-1.9.1.release.tar.gz(生产链)](1.9.1/ud-data-consumer-sdk-1.9.1.release.tar.gz?raw=true)
+* [变更说明](1.9.1/README.md)
+* [SDK 接入说明](1.9.1/SDK.md)
+
 ## 1.9.0-RELEASE （2018-12-12）
 
 ```plaintext

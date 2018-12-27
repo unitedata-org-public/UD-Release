@@ -2,6 +2,17 @@
 
 ## 版本发布
 
+### 1.9.1-RELEASE（2018-12-27）
+
+```plaintext
+数链平台数据输出服务 SDK 1.9.1。
+修正了 “斑马” 合约中的已知问题；
+支持合约 “规格”；
+```
+
+* [数据提供方](ud-data-producer/1.9.1/README.md)
+* [数据输出服务](ud-data-consumer/1.9.1/README.md)
+
 ### 1.9.0-RELEASE（2018-12-12）
 
 ```plaintext
