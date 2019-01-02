@@ -38,16 +38,6 @@ public class DataQueryProtocolTest {
         queryParameter.put("statusTime", "2018-11-05 10:00:00");
     }
 
-    private String md5(String... args){
-        try{
-            Arrays.sort(args);
-            return DigestUtils.md5(String.join("", args));
-        }
-        catch (Exception cause){
-            return null;
-        }
-    }
-
     // 信用凭证查询
     @Test
     public void creditQuery() {
@@ -58,9 +48,9 @@ public class DataQueryProtocolTest {
         // 计算因子，一个随机数
         final long factor = System.currentTimeMillis();
         // 二要素 md5
-        final String key = md5(name, idNumber);
+        final String key = ProduceHashUtil.twoHash(name, idNumber);
         // 命中键值 md5
-        final String verifyKey = md5(key, String.valueOf(factor));
+        final String verifyKey = ProduceHashUtil.randomHash(key, String.valueOf(factor));
         for(int i=0;i<1;i++) {
             StopWatch watch = StopWatch.
                     createStarted();
