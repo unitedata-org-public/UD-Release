@@ -50,7 +50,7 @@ POST
 
 * 通过密文生成工具，将明文二要素转换为密文文件
 	* java -jar test-tool-1.9.2.jar -gu 明文csv文件
-    * 数据转换代码
+    * [数据转换代码](../1.9.2/test-tool/src/main/java/org/unitedata/consumer/Main.java#L207)
 * 将密文文件通过上传工具页面上传
 ```
 http://localhost:8080/ud-eds/blacklist-upload
