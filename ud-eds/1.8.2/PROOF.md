@@ -1,7 +1,7 @@
 ## 凭证上传操作文档
 
 #### 黑名单凭证数据结构
-![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/1.8.3/images/blacklist.png)
+![image](https://github.com/unitedata-org-public/UD-Release/blob/master/ud-eds/1.8.2/images/blacklist.png)
 
 #### 黑名单凭证数据表
 ```
