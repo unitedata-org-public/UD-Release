@@ -209,15 +209,12 @@ public class Main implements Runnable{
         try {
             String twoHash = ProduceHashUtil.twoHash(params[0], params[1]);
             String random = String.valueOf(DateUtils.unixNano());
-//            String timestamp = String.valueOf(System.currentTimeMillis());
             stringBuffer
                     .append(params[2]).append(',')
-//                    .append(timestamp).append(',')
                     .append(random).append(',')
                     .append(twoHash).append(',')
                     .append(ProduceHashUtil.randomHash(twoHash, params[2])).append(',')
                     .append(ProduceHashUtil.randomHash(twoHash, random))
-//                    .append(ProduceHashUtil.privacyHash(twoHash, params[2],timestamp,random))
                     .append('\n');
         } catch (Exception e) {
             throw new RuntimeException(e);
