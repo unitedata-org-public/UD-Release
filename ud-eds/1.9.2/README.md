@@ -15,7 +15,7 @@
 4.    然后执行java -version看看是否配置成功
 
 ### 二、Tomcat安装
-5.    下载解压tomcat（http://tomcat.apache.org/）建议：Tomcat 8.0
+5.    下载解压tomcat（[http://tomcat.apache.org/](http://tomcat.apache.org/)）建议：Tomcat 8.0
 * 建议下载zip或tar.gz直接解压使用
 
 ### 三、Mysql安装
