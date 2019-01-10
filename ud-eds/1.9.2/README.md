@@ -111,3 +111,8 @@
 1.    将ud-eds.war放在Tomcat安装目录中的/webapps目录下
 2.    运行Tomcat（bin目录下执行：sudo sh startup.sh）
 3.    浏览器访问http://localhost:8080/ud-eds/ 测试部署是否成功 (若失败，请检查以上操作或咨询相关人员)
+
+### 十二、提供方部署
+1. 部署提供方服务，参照提供方服务部署文档。
+2. 交易所-设置-设置提供方服务地址 https://preview.unitedata.link/exchange/newService
+3. 企业内部系统-斑马合约上线
