@@ -45,6 +45,8 @@ CREATE TABLE `contract_info` (
 `contract_status_type` int(6) DEFAULT NULL COMMENT '合约状态',
 `table_param_list` varchar(255) DEFAULT NULL COMMENT '合约数据字典',
 `hidden` tinyint(1) DEFAULT '0' COMMENT '匿踪标识:0=不匿踪,1=匿踪',
+`created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
 `active` tinyint(1) DEFAULT '1' COMMENT '停用标识:0=不停用,1=停用',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='合约信息';
