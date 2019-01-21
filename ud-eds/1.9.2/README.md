@@ -42,11 +42,11 @@
 4.    增加spring.datasource.druid.username=对应本地设置的username)
 5.    增加spring.datasource.druid.password=(对应本地设置的password)
 6.    增加wallet.url=钱包api
-（preview环境：wallet.url=https://preview.unitedata.link/wallet/api/v1/accounts）
-（www环境：wallet.url=https://www.unitedata.link/wallet/api/v1/accounts）
+* （preview环境：wallet.url=https://preview.unitedata.link/wallet/api/v1/accounts）
+* （www环境：wallet.url=https://www.unitedata.link/wallet/api/v1/accounts）
 7.    增加eos.url=节点Api
-（preview环境：eos.url=https://preview.unitedata.link/v1）
-（www环境：eos.url=https://www.unitedata.link/v1）
+* （preview环境：eos.url=https://preview.unitedata.link/v1）
+* （www环境：eos.url=https://www.unitedata.link/v1）
 
 * 注意：重新修改项目配置文件application.properties,需重新启动Tomcat才能生效。
 
