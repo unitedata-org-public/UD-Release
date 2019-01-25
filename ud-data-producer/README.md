@@ -5,6 +5,20 @@
 它实现了一组以模型计算为核心的数据处理，多方计算混淆数据的业务过程，并且提供了一组 restful API 风格的简单接口。
 ```
 
+## 1.9.3-RELEASE （2019-1-25）
+
+```plaintext
+数链平台数据提供服务发布 1.9.3。
+支持创建属于用户的 “斑马” 合约；
+支持 “斑马” 合约分等级业务模型；
+修正已知的所有错误；
+其它...
+```
+
+* [ud-data-producer-server-1.9.3.release.tar.gz](1.9.3/ud-data-producer-server-1.9.3.release.tar.gz?raw=true)
+* [变更说明](1.9.3/README.md)
+* [部署说明](1.9.3/DEPLOY.md)
+
 ## 1.9.1-RELEASE （2018-12-27）
 
 ```plaintext
