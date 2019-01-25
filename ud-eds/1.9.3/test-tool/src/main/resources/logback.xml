@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="pattern" value="%date{ISO8601} %-5level [%thread] %logger{32} - %message%n"/>
+    <property name="charset" value="UTF-8"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${pattern}</pattern>
+        </layout>
+    </appender>
+    <!-- rollingFile aysnc=========================================================-->
+    <appender name ="async_default" class= "ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <!--<discardingThreshold >0</discardingThreshold>-->
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>1024</queueSize>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="rollingFile"/>
+        <neverBlock>true</neverBlock>
+    </appender>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="STDOUT"/>
+        <!--<springProfile name="dev,test">
+            <appender-ref ref="STDOUT"/>
+        </springProfile>-->
+    </root>
+
+</configuration>
