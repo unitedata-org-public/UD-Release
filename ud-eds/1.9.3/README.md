@@ -47,6 +47,7 @@
 7.    增加eos.url=节点Api
 * （preview环境：eos.url=https://preview.unitedata.link/v1）
 * （www环境：eos.url=https://www.unitedata.link/v1）
+7.    增加debug=false，确保debug级别的日志不会出现。
 
 * 注意：重新修改项目配置文件application.properties,需重新启动Tomcat才能生效。
 
