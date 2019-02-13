@@ -43,8 +43,8 @@ POST
 通过斑马合约上传工具
 * 将数据源导出到明文二要素csv文件，格式为（姓名，身份证,逾期信息）。 示例：
 
-    张三,32098219880703086X,{"overdueMonth":"2018-01-01","overdueDays":"5","overdueQuantity":" 500 RMB"}
-    王五,11098219880703086X,{"overdueMonth":"2018-01-01","overdueDays":"5","overdueQuantity":" 500 RMB"}
+    张三,1231231245125125,{"amount":"big","type":"M3","into_time":"2019-01-01"}
+    李四,1231231245125126,{"amount":"middle","type":"M2","into_time":"2019-01-01"}
 
 * 通过密文生成工具，将明文二要素转换为密文文件
 	* java -jar test-tool-1.9.2.jar -gu 明文csv文件
