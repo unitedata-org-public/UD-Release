@@ -48,9 +48,9 @@ privateKey=5KfU6VKjtXCH1RNvPd7hZxQdi9DfAqtGdYwdK38WT97DqXc5R9v
 contractApi=http://preview.unitedata.link/v1
 // eds 数据桥接网关地址
 edsApi=http://unitedata.fudata.info/ud-eds
-// eds 数据桥接网关 http[s] 数据访问超时
+// eds 数据桥接网关 http[s] 数据访问超时
 edsTimeoutRead=1000
-// eds 数据桥接网关 http[s] 连接超时
+// eds 数据桥接网关 http[s] 连接超时
 edsTimeoutConnect=1000
 // 多方计算服务 api 地址
 multiServiceApi=
@@ -90,3 +90,7 @@ redisPoolMinIdle=0
 ```plaintext
 propertiesFileName={绝对路径}/application.properties
 ```
+
+## 日志
+
+默认日志文件：${user.home}/logs/ud/producer-server.log
