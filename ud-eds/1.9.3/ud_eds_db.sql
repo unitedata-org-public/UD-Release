@@ -126,8 +126,35 @@ INDEX idx_block_num(`block_num`)
 
 #黑名单数据表
 DROP TABLE IF EXISTS `blacklist_info`;
+#凭证管理表
+CREATE TABLE proof_upload_history(
+	`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+	`upload_id` bigint(20) DEFAULT NULL COMMENT '上传批次id',
+	`contract_address` varchar(50) DEFAULT NULL COMMENT '合约地址',
+    `file` varchar(256) DEFAULT NULL COMMENT '文件名',
+    `account` varchar(100) DEFAULT NULL COMMENT '上传者',
+    `hash` varchar(256) DEFAULT NULL COMMENT 'Hash(合约地址，文件名, 上传者)',
+    `records_num` int DEFAULT 0 COMMENT '文件包含条目数',
+    `to_db_num` int DEFAULT 0 COMMENT '入库成功数链',
+	`success_num` int DEFAULT 0 COMMENT '上链同步成功数量',
+	`push_time` timestamp NOT NULL COMMENT '上传时间',
+    `status` int DEFAULT NULL COMMENT '状态',
+    `status_desc` varchar(50) DEFAULT NULL COMMENT '状态描述',
+	`createdby` varchar(100) DEFAULT NULL COMMENT '创建人',
+    `pushchain_errors` text DEFAULT NULL COMMENT '上链异常',
+    `upload_errors` mediumtext DEFAULT NULL COMMENT '上传遇到的问题',
+	`created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`updatedby` bigint(20) DEFAULT NULL COMMENT '修改人',
+	`updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	`active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
+	 PRIMARY KEY (`id`),
+	 UNIQUE KEY `uk_key` (`upload_id`) USING BTREE,
+	 INDEX `IDX_UPLOADID` (`upload_id`)
+ );
+
 CREATE TABLE `blacklist_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `contract_address` varchar(50) DEFAULT 'ud.blacklist' COMMENT '合约地址',
   `overdue_data` text DEFAULT NULL COMMENT '逾期信息',
   `time_stamp` bigint(20) DEFAULT NULL COMMENT '时间戳',
   `random_code` bigint(20) DEFAULT NULL COMMENT '静态随机码',
@@ -141,6 +168,7 @@ CREATE TABLE `blacklist_info` (
   `block_num` bigint(20) DEFAULT NULL COMMENT '区块高度',
   `sync_time` bigint(20) DEFAULT NULL COMMENT '同步时间',
   `sync_status` int DEFAULT '0' COMMENT '同步状态 0-未同步，1-已同步',
+  `upload_id` bigint(20) DEFAULT NULL COMMENT '上传批次id',
   `comment` varchar(200) DEFAULT NULL COMMENT '备注',
   `createdby` bigint(20) DEFAULT NULL COMMENT '创建人',
   `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -148,13 +176,24 @@ CREATE TABLE `blacklist_info` (
   `updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
   `active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_key` (`base_hash`) USING BTREE,
+  UNIQUE KEY `uk_key` (`contract_address`,`base_hash`) USING BTREE,
+  INDEX `IDX_CONTRACT_ADDRESS` (`contract_address`),
   INDEX `IDX_HIT_TWO_HASH` (`hit_two_hash`),
   INDEX `IDX_HIT_TWO_RANDOM_HASH` (`hit_two_random_hash`),
   INDEX `IDX_BASE_HASH` (`base_hash`),
   INDEX `IDX_TRX_ID` (`trx_id`),
   INDEX `IDX_SYNC_STATUS` (`sync_status`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='黑名单数据';
+
+
+ CREATE TABLE lock_entries(
+     `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+	`name` varchar(100) DEFAULT NULL COMMENT '锁名',
+	`owner` varchar(255) DEFAULT NULL COMMENT '持有者',
+    `last_accuired_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+    PRIMARY KEY (`id`),
+	UNIQUE KEY `uk_key` (`name`) USING BTREE
+ )
 
 #黑名单需求方请求数据表
 DROP TABLE IF EXISTS `hide_request_info`;
