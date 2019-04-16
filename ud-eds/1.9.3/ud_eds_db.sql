@@ -31,7 +31,8 @@ CREATE TABLE `outputdefinition_info` (
 `updated_person` varchar(100) DEFAULT NULL COMMENT '修改人',
 `updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
 `active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
-PRIMARY KEY (`id`)
+PRIMARY KEY (`id`),
+  INDEX IDX_SCHEMA_TABLE(`schema_name`,`table_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='输出定义信息';
 
 #提供方参与合约信息表
