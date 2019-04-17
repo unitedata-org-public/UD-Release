@@ -197,7 +197,6 @@ CREATE TABLE `blacklist_info` (
  )
 
 #黑名单需求方请求数据表
-DROP TABLE IF EXISTS `hide_request_info`;
 CREATE TABLE `hide_request_info` (
 `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `order_id` bigint(20) DEFAULT NULL COMMENT '请求订单ID',
@@ -240,7 +239,7 @@ CREATE TABLE `provide_response_info` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='提供方响应数据';
 
-DROP TABLE IF EXISTS `user_info`;
+
 CREATE TABLE `user_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
   `account` varchar(20) DEFAULT NULL COMMENT '用户名',
