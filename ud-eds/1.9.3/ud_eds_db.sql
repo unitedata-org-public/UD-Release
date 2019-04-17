@@ -1,5 +1,5 @@
 #数据库配置信息表
-DROP TABLE IF EXISTS `dataserver_info`;
+
 CREATE TABLE `dataserver_info` (
 `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `server_name` varchar(255) DEFAULT NULL COMMENT '显示名称',
@@ -18,7 +18,7 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='数据库信息';
 
 #数据输出定义信息表
-DROP TABLE IF EXISTS `outputdefinition_info`;
+
 CREATE TABLE `outputdefinition_info` (
 `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `table_name` varchar(255) DEFAULT NULL COMMENT '关联表名称',
@@ -36,7 +36,7 @@ PRIMARY KEY (`id`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='输出定义信息';
 
 #提供方参与合约信息表
-DROP TABLE IF EXISTS `contract_info`;
+
 CREATE TABLE `contract_info` (
 `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '合约ID',
 `provider` varchar(255) DEFAULT NULL COMMENT '提供方',
@@ -53,7 +53,7 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='合约信息';
 
 #匿踪信息表
-DROP TABLE IF EXISTS `hidden_info`;
+
 CREATE TABLE `hidden_info` (
 `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '匿踪ID',
 `md5` varchar(20) DEFAULT NULL COMMENT '数据的md5码',
@@ -67,7 +67,7 @@ INDEX idx_md5(`md5`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='匿踪信息';
 
 #合约业务信息表
-DROP TABLE IF EXISTS `contract_biz`;
+
 CREATE TABLE `contract_biz` (
 `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '标识ID',
 `contract_id` varchar(20) DEFAULT NULL COMMENT '合约ID',
@@ -80,7 +80,7 @@ INDEX idx_contract_id(`contract_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='合约对应业务信息';
 
 #仓储空间信息表
-DROP TABLE IF EXISTS `cache_info`;
+
 CREATE TABLE `cache_info` (
 `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `key_info` varchar(200) NOT NULL COMMENT '查询的key',
@@ -96,7 +96,7 @@ UNIQUE KEY `uk_key` (`key_info`,`type_info`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='持久化数据对象库';
 
 #第三方授权存证数据表
-drop table if exists `tb_certification_log`;
+
 create table `tb_certification_log`(
 `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `key_info` varchar(32) DEFAULT NULL COMMENT '存证 key',
@@ -126,7 +126,7 @@ INDEX idx_block_num(`block_num`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARSET = utf8 COMMENT = '第三方存证操作日志';
 
 #黑名单数据表
-DROP TABLE IF EXISTS `blacklist_info`;
+
 #凭证管理表
 CREATE TABLE proof_upload_history(
 	`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -218,7 +218,7 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='需求方请求数据';
 
 #黑名单提供方响应数据表
-DROP TABLE IF EXISTS `provide_response_info`;
+
 CREATE TABLE `provide_response_info` (
 `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
 `order_id` bigint(20) DEFAULT NULL COMMENT '请求订单ID',
@@ -262,7 +262,7 @@ INSERT INTO user_info(`account`,`password`,`name`,`email`,`role`,`status`) VALUE
 
 
 #用户登陆token表
-DROP TABLE IF EXISTS `token_info`;
+
 CREATE TABLE `token_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_id` bigint(20) DEFAULT NULL COMMENT '用户标识',
