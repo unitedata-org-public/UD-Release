@@ -194,7 +194,7 @@ CREATE TABLE `blacklist_info` (
     `last_accuired_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
     PRIMARY KEY (`id`),
 	UNIQUE KEY `uk_key` (`name`) USING BTREE
- )
+ );
 
 #黑名单需求方请求数据表
 CREATE TABLE `hide_request_info` (
@@ -286,12 +286,5 @@ ALTER TABLE cache_info ADD COLUMN (
 `sync_status` int(6) DEFAULT '0' COMMENT '同步状态');
 ALTER TABLE cache_info ADD INDEX IDX_SYNC_STATUS(`sync_status`);
 
-#合约信息表增加合约类型字段
-ALTER TABLE contract_info ADD COLUMN `contract_type` int(6) DEFAULT '0' COMMENT '合约类型0-链上交易合约，1-记账模式合约，2-主题合约';
-ALTER TABLE blacklist_info
-ADD COLUMN  `contract_address` varchar(50) DEFAULT 'ud.blacklist' COMMENT '合约地址',
-DROP KEY `uk_key`,
-ADD UNIQUE KEY `uk_key_contract` (`contract_address`,`base_hash`) ,
-ADD INDEX `IDX_CONTRACT_ADDRESS` (`contract_address`);
 
 
