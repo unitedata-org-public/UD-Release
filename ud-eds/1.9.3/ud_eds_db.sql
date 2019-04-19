@@ -257,7 +257,10 @@ CREATE TABLE `user_info` (
   `active` tinyint(1) DEFAULT '1' COMMENT '逻辑删除标识:0=无效,1=有效',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户管理表';
-INSERT INTO user_info(`account`,`password`,`name`,`email`,`role`,`status`) VALUES(`admin`,`123456`,`admin`,`admin@admin.com`,1,1);
+
+
+INSERT INTO user_info(`account`,`password`,`name`,`email`,`role`,`status`) VALUES('admin','123456','admin','admin@admin.com',1,1);
+
 
 
 #用户登陆token表
