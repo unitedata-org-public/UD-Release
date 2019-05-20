@@ -2,6 +2,19 @@
 
 ## 版本发布
 
+### 1.9.6-RELEASE（2019-5-20）
+
+```plaintext
+数链平台数据输出服务 SDK 1.9.6。
+修复了已知的所有错误；
+优化部分业务结构；
+新增 id-mapping 用户影像业务支持；
+新增简单存证业务支持。
+```
+
+* [数据提供方](ud-data-producer/1.9.6/README.md)
+* [数据输出服务](ud-data-consumer/1.9.6/README.md)
+
 ### 1.9.3-RELEASE（2019-1-25）
 
 ```plaintext
