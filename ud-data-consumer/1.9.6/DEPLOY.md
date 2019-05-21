@@ -11,7 +11,7 @@
 
 ## 部署和运行
 
-1. [使用 jar 包部署](DEPLOY-WITH-JAR)
+1. [使用 jar 包部署](DEPLOY-WITH-JAR.md)
 
 ## 数据服务配置
 
@@ -47,4 +47,4 @@ security.api=
 
 ## API 文档说明
 
-* [API 说明文档](API)
+* [API 说明文档](API.md)
