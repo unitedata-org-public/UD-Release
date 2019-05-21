@@ -198,6 +198,24 @@ String protocolDigest = md5(plaintext);
 
 ```
 
+## 存证签名
+
+> 下载 SDK
+
+* [存证签名 SDK](http:)
+
+> 直接授权签名
+
+```java
+
+```
+
+> 间接授权签名
+
+```java
+
+```
+
 ## 简单存证
 
 ```plaintext
@@ -228,9 +246,9 @@ bizId|string|true|业务 ID
 bizName|string|true|业务名称
 protocolDigest|string|true|已备案协议摘要（[获取](#存证协议备案摘要计算公式)）
 directAuthorizer|string|true|直接授权人账户
-directSignature|string|true|直接授权人签名
+directSignature|string|true|直接授权人签名（[获取](#存证签名)）
 indirectAuthorizer|string|false|间接授权人账户
-indirectSignature|string|false|间接授权人签名
+indirectSignature|string|false|间接授权人签名（[获取](#存证签名)）
 userAgent|map|false|用户信息
 token|string|true|安全访问令牌（[获取](#获取token)）
 timestamp|long|true|当前请求时间戳
