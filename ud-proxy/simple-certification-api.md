@@ -1,8 +1,8 @@
 
-# 简单存证 API 文档
+# 代理服务 API 文档
 
 ```plaintext
-简单存证 API 文档
+代理服务 API 文档
 ```
 
 ## 服务地址
@@ -32,7 +32,7 @@ ok|boolean|请求处理状态
 
 ## 访问签名
 
-### 获取 token
+### 获取token
 
 ```plaintext
 token 地址：
@@ -58,12 +58,12 @@ token 地址：
 
 从参数得到数据：
 String[] arr = {
-    "sum",
-    "[{\"valueType\":\"java.lang.Integer\",\"value\":0}]",
-    "java.lang.Integer",
-    "org.unitedata.proxy.server.domain.mock.MockRpcService",
-    "1558347705",
-    "e954a6ce-51fd-4409-b805-9120af6d387a"
+    "${method}",
+    "${parameters}",
+    "${returnType}",
+    "${service}",
+    "${timestamp}",
+    "${token}"
 };
 
 将得到的数据按字母升序排列
@@ -102,9 +102,9 @@ service|string|true|RPC 接口名称
 method|string|true|RPC 执行函数名称
 parameters|array[Arg]|true|RPC 函数执行参数
 returnType|string|true|RPC 函数返回值类型
-token|string|true|安全访问令牌
+token|string|true|安全访问令牌（[获取](#获取token)）
 timestamp|long|true|当前请求时间戳
-sign|string|true|当前请求数据签名
+sign|string|true|当前请求数据签名（[获取](#签名)）
 
 > Arg 结构
 
@@ -158,9 +158,45 @@ content|string|true|协议内容正文
 md5|string|true|协议内容 MD5 值
 registrant|string|true| 协议备案登记人账户
 registrySignature|string|true|备案签名
-token|string|true|安全访问令牌
+token|string|true|安全访问令牌（[获取](#获取token)）
 timestamp|long|true|当前请求时间戳
-sign|string|true|当前请求数据签名
+sign|string|true|当前请求数据签名（[获取](#签名)）
+
+## 存证协议备案摘要计算公式
+
+在进行存证之前，需要先进行[存证协议备案](#简单存证协议备案)。
+在经过存证协议备案之后，需要计算得到存证协议备案摘要。详细公式如下：
+
+```java
+1，得到如下的存证协议内容
+{
+  "bizId": "string",
+  "bizName": "string",
+  "content": "string",
+  "md5": "string",
+  "registrant": "string",
+  "registrySignature": "string",
+  "sign": "string",
+  "timestamp": 0,
+  "token": "string"
+}
+
+2，从上文的备案协议内容中，获取协议摘要内容，得到如下数据：
+String[] arr = {
+  "${md5}",
+  "${bizId}",
+  "${bizName}",
+  "${registrant}",
+  "${timestamp}"
+};
+
+3，将获取得到的协议摘要内容连接，得到计算明文数据：
+String plaintext = String.join("", arr);
+
+4，计算明文的 md5，得到协议备案签名:
+String protocolDigest = md5(plaintext);
+
+```
 
 ## 简单存证
 
@@ -190,12 +226,12 @@ sign|string|true|当前请求数据签名
 ---|---|-|----
 bizId|string|true|业务 ID
 bizName|string|true|业务名称
-protocolDigest|string|true|已备案协议摘要
+protocolDigest|string|true|已备案协议摘要（[获取](#存证协议备案摘要计算公式)）
 directAuthorizer|string|true|直接授权人账户
 directSignature|string|true|直接授权人签名
 indirectAuthorizer|string|false|间接授权人账户
 indirectSignature|string|false|间接授权人签名
 userAgent|map|false|用户信息
-token|string|true|安全访问令牌
+token|string|true|安全访问令牌（[获取](#获取token)）
 timestamp|long|true|当前请求时间戳
-sign|string|true|当前请求数据签名
+sign|string|true|当前请求数据签名（[获取](#签名)）
