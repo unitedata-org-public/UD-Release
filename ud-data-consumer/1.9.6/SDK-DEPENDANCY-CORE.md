@@ -9,7 +9,7 @@
 
 > 下载 sdk 包
 
-* [ud-data-consumer-core-1.9.6.FINAL.jar](ud-data-consumer-core-1.9.6.FINAL.jar.tar.gz)
+* [ud-data-consumer-core-1.9.6.FINAL.jar](ud-data-consumer-core-1.9.6.FINAL.jar.tar.gz?raw=true)
 
 ```java
 
