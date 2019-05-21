@@ -1,11 +1,11 @@
 
 # 1.9.6.FINAL-RELEASE
 
-* [需求方服务](DEPLOY)
-* [简单需求方 sdk 接入](SDK-DEPENDANCY-CORE)
-* [第三方存证 sdk 接入](SDK-DEPENDANCY-CERTIFICATION)
-* [“斑马” 服务 sdk 接入](SDK-DEPENDANCY-ZEBRA)
-* [id-mapping 用户影像 sdk 接入](SDK-DEPENDANCY-IDMAPPING)
+* [需求方服务](DEPLOY.md)
+* [简单需求方 sdk 接入](SDK-DEPENDANCY-CORE.md)
+* [第三方存证 sdk 接入](SDK-DEPENDANCY-CERTIFICATION.md)
+* [“斑马” 服务 sdk 接入](SDK-DEPENDANCY-ZEBRA.md)
+* [id-mapping 用户影像 sdk 接入](SDK-DEPENDANCY-IDMAPPING.md)
 
 ## 更新日志
 
@@ -36,4 +36,4 @@
                |                |                |                             |
                +----------------+----------------+-----------需求方服务(consumer-server)
 
-```s
+```
