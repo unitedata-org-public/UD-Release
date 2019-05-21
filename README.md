@@ -14,7 +14,7 @@
 
 * [数据提供方](ud-data-producer/1.9.6/README.md)
 * [数据输出服务](ud-data-consumer/1.9.6/README.md)
-* [简单存证 API](ud-proxy/simple-certification-api)
+* [简单存证 API](ud-proxy/simple-certification-api.md)
 
 ### 1.9.3-RELEASE（2019-1-25）
 
