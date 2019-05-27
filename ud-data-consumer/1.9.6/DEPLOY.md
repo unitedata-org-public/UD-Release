@@ -47,4 +47,4 @@ security.api=
 
 ## API 文档说明
 
-* [API 说明文档](API.md)
+* [API 说明文档](../shared/consumer-api.1.0.md)
