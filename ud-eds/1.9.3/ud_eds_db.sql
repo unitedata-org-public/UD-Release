@@ -38,19 +38,18 @@ PRIMARY KEY (`id`),
 #提供方参与合约信息表
 
 CREATE TABLE `contract_info` (
-`id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '合约ID',
-`provider` varchar(255) DEFAULT NULL COMMENT '提供方',
-`contract_account` varchar(255) DEFAULT NULL COMMENT '合约账号',
-`contract_name` varchar(255) DEFAULT NULL COMMENT '合约名称',
-`join_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '参与时间',
-`contract_status_type` int(6) DEFAULT NULL COMMENT '合约状态',
-`table_param_list` varchar(255) DEFAULT NULL COMMENT '合约数据字典',
-`hidden` tinyint(1) DEFAULT '0' COMMENT '匿踪标识:0=不匿踪,1=匿踪',
-`created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-`updated_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-`active` tinyint(1) DEFAULT '1' COMMENT '停用标识:0=不停用,1=停用',
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='合约信息';
+   `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '合约ID',
+   `provider` varchar(255) DEFAULT NULL COMMENT '提供方',
+   `contract_account` varchar(255) DEFAULT NULL COMMENT '合约账号',
+   `contract_name` varchar(255) DEFAULT NULL COMMENT '合约名称',
+   `join_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '参与时间',
+   `contract_status_type` int(6) DEFAULT NULL COMMENT '合约状态',
+   `table_param_list` varchar(255) DEFAULT NULL COMMENT '合约数据字典',
+   `hidden` tinyint(1) DEFAULT '0' COMMENT '匿踪标识:0=不匿踪,1=匿踪',
+   `active` tinyint(1) DEFAULT '1' COMMENT '停用标识:0=不停用,1=停用',
+   `contract_type` int(6) DEFAULT '0' COMMENT '合约类型',
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=334 DEFAULT CHARSET=utf8 COMMENT='合约信息'
 
 #匿踪信息表
 
